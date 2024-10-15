@@ -1,8 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 600,
-    "height": 400,
-    "title":"Australia",
+    "height": 500,
+    "title":"Energy Usage by Fuel Type Across Australia (2023)",
     "data": {
       "url": "https://raw.githubusercontent.com/jascikasabesh/datavis2/main/ne_10m_admin_1_states_provinces.json",
       "format": {
