@@ -1,0 +1,49 @@
+body *{
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    font-weight: 1000;
+    margin-bottom: 30px; 
+}
+
+body {
+    background-color: rgb(225, 241, 225);
+}
+
+.page {
+    width: 1000px;
+    background-color: white;
+    margin: auto;
+    padding: 50px;
+    padding-top: 35px;
+}
+
+.vis-container {
+    width: 100%;
+    max-width: 600px;
+   
+    
+}
+
+.description h2,
+h1 {
+    margin-top: 0px;
+}
+
+.description-right {
+    padding-left: 20px;
+}
+
+.description-left {
+    padding-right: 20px;
+   
+}
+
+.pure-g {
+    margin-bottom: 30px;
+}
+
+.small-font {
+    font-size: 12px;
+}

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title> The Green Transition: Australia's Renewable Energy and Emissions </title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+  <!-- Import pure.css -->
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+  integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+  <!-- CSS file -->
+  <link rel="stylesheet" type="text/css" href="styles.css" media="all">
+</head>
+
+
+
+<body>
+
+  <div class="page">
+
+    <!-- Main title section -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <h1><b>The Green Transition: Global Renewable Energy and Emissions </b></h1>
+        <p>
+          Australia is undergoing significant transformation in its energy sector as part of the global effort 
+          to combat climate-change. "The Green Transition" focuses on reducing reliance on fossil fuels, 
+          such as coal and natural gas, and increasing the usage of renewable energy resources. Historically, Australia's 
+          energy production has been heavily dependent on carbon-intensive fuels, which has made it one of the highest per capita
+          emitters of greenhouse gases globally. The burning of fossil fuels have contributed to rising carbon dioxide (CO2) levels in the atmosphere as well.
+          These emissions are drivers of the effects climate change which has become evident through extreme weather events,
+          heatwaves, wildfires, and biodiversity loss across the country. 
+      </p>
+
+      <p>
+          This dashboard captures the evolutoin of renewable energy generation in Australia, providing insights into the growing
+          contribution of various renewable sources to the national energy mix. It also visualises the share of renewable energy in 
+          primary consumption, tracking how these developments align with efforts to lower greenhouse gas emissions. By exploring these trends, we can 
+          understand Australias progress towards a sustainable, low-carbon future.
+      </p>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+
+
+    <!-- Energy consumption -->
+    <div class="pure-g">
+      <div class="pure-u-2-3">
+        <div id="specVis2" class="vis-container"></div>
+      </div>
+      <div class="pure-u-1-3">
+        <div class="description description-right">
+          <h2>A Look at Energy Consumption by Fuel Type </h2>
+          <p> Australia is heavily reliant on fossil fuels, including coal, gas, and oil. This is evident across states like New South Wales, 
+            Queensland and Victoria which have been centres for coal mining, providing cheap and reliable energy for domestic consumption and export. Gas plays a key role
+            in Western Australia because of their natural gas reserves.
+            While fossil fuels dominate most states, Tasmania is an exception for their abundant water resources and early investment in hydro infrastructure.
+            Nevertheless, Australia is now making efforts to diversify its energy mix and to reduce its dependence on fossil fuels. 
+        </p>
+        </div>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+  
+
+ <!-- Energy generation -->
+ <div class="pure-g">
+  <div class="pure-u-1-1">
+    <div class="description description-left">
+      <h2> Australia's Evolving Energy Mix</h2>
+      <p> Australia is well-positioned to harness solar energy, while costal regions provide ample opportunity for wind power generation. 
+        Over the past decade, renewable energy generation has increased dramatically, driven by substantial investments in wind and
+        solar power. Large-scale and smaller-scale solar are becoming dominant contributors to Australia's energy mix. Hydroelective power was 
+        a leading energy source, however its share declined as other technologies expanded. The aim is to gradually reduce fossil fuel generation. </p>
+    </div>
+  </div>
+  <div class="pure-u-2-3">
+    <div id="specVis3" class="vis-container"></div>
+  </div>
+</div>
+<!-- end pure grid group -->
+
+
+
+
+<!-- Global Renewable energy consumption -->
+<div class="pure-g">
+    <div class="pure-u-1-1">
+        <div class="description description-left">
+            <h2>Australia versus the World </h2>
+            <p>
+              Australia has made its transition to renewable energy slower compared to other countries. Whilst equipped with 
+              abundany resources, it still lags behind global leaders like Brazil, Norway in terms of renewable energy as a percentage of total
+              primary energy consumption. These countries have been able to harness their natural advantages, such as Bioenergy (Brazil) and Hydropower (Iceland).
+              Globally, the transition to renewables have been more pronounced in countries with clear policy and government incentives, which Australia is still 
+              working towards. Many low income countries 
+              particularly in Africa and parts of Asia struggle to prioritise due to more immediate economic challenges, hence the lack of infrastructure in renewable 
+              technologies. 
+            </p>
+        </div>
+        <div id="specVis1" class="vis-container"></div>
+    </div>
+</div>
+
+<!-- Greeenhouse gas emissions -->
+<div class="pure-g">
+  <div class="pure-u-1-1">
+      <div class="description description-left">
+          <h2>Carbon Footprint Challenge</h2>
+          <p>
+            Greenhouse gases include methane (CH4), nitrous oxide (N20) and flourine gases, all of which trap heat in the Earth's atmosphere. These gases primarily come
+            from burning fossil fuels for electricity, heat and transportation. The accumulation of these gases in the atmosphere has a negative effect 
+            leading to more frequent extreme weather events, rising sea levels, and disruptions to ecosystems. Australia, while not a significant global
+            emitter as countries like China it still contributes a substantial amount of gases due to heavy reliance to coal, gas and oil. 
+
+                    </p>
+      </div>
+      <div id="specVis5" class="vis-container"></div>
+  </div>
+</div>
+
+
+<!-- CO2 emissions -->
+<div class="pure-g">
+  <div class="pure-u-1-1">
+      <div class="description description-left">
+          <h2>The Burden of CO2</h2>
+          <p>
+            CO2 is a type of greenhouse gas and most importantly one of the largest emitters contributing to climate change, driving the increase in global temperatures and environmental consequences. Again they stem
+            from the burning of fossil fuels. Australia is a prime example of this challenge. Despite having a relatively small population, it ranks high in per capita 
+            emissions, largely because of its dependence on fossil fuels. Many lower income countries contribute to far less global emissions because of the lack of 
+            industrial infrastructure. However, as these economies grow, there is a risk that their emissions could increase if they follow same fossil fuel heavy paths. 
+          </p>
+      </div>
+      <div id="specVis4" class="vis-container"></div>
+  </div>
+</div>
+
+
+
+  <script type="text/javascript">
+     var specVis1 = "https://raw.githubusercontent.com/jascikasabesh/datavis2/refs/heads/main/primary_renewable.json";
+        var specVis2 = "https://raw.githubusercontent.com/jascikasabesh/datavis2/refs/heads/main/aus_energy.json";
+        var specVis3 = "https://raw.githubusercontent.com/jascikasabesh/datavis2/refs/heads/main/energysource.json";
+        var specVis4 = "https://raw.githubusercontent.com/jascikasabesh/datavis2/refs/heads/main/co2emission.json";
+        var specVis5 = "https://raw.githubusercontent.com/jascikasabesh/datavis2/refs/heads/main/greenemission.json";
+
+    vegaEmbed('#specVis1', specVis1, { "actions": false });
+
+    vegaEmbed('#specVis2', specVis2, { "actions": false }).then(function (result) {}).catch(console.error);
+
+    vegaEmbed('#specVis3', specVis3, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#specVis4', specVis4, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#specVis5', specVis5, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+  </script>
+
+</body>
+
+</html>
