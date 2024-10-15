@@ -1,43 +1,82 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Australia's Renewable Energy Production Over Time",
-  "width": 400,
-  "height": 400,
   "data": {
     "url": "https://raw.githubusercontent.com/jascikasabesh/datavis2/refs/heads/main/cleaned_renewables_data.csv"
   },
-  "transform": [
+  "vconcat": [
     {
-      "calculate": "datum['Fuel Type'] == 'Biogas' ? 'Biogas Energy' : datum['Fuel Type'] == 'Wind' ? 'Wind Power' : datum['Fuel Type'] == 'Hydro' ? 'Hydroelectric Power' : datum['Fuel Type'] == 'Large-scale solar PV' ? 'Large-scale Solar' : datum['Fuel Type'] == 'Small-scale solar PV' ? 'Small-scale Solar' : datum['Fuel Type'] == 'Bagasse, wood' ? 'Bioenergy (Bagasse & Wood)' : datum['Fuel Type']",
-      "as": "Fuel Type Renamed"
-    }
-  ],
-  "mark": {
-    "type": "area",
-    "line": {"color": "darkgray"},
-    "point": {"filled": false, "fill": "white"}
-  },
-  "encoding": {
-    "x": {
-      "field": "Year",
-      "type": "temporal",
-      "axis": {"title": "Year"}
-    },
-    "y": {
-      "field": "Value",
-      "type": "quantitative",
-      "axis": {"title": "Energy Production (Gigawatt Hours)"}
-    },
-    "color": {
-      "field": "Fuel Type Renamed",
-      "type": "nominal",
-      "legend": {"title": "Renewable Source"}
-    },
-    "tooltip": [
-      {"field": "Year", "type": "temporal"},
-      {"field": "Fuel Type Renamed", "type": "nominal", "title": "Source"},
-      {"field": "Value", "type": "quantitative", "title": "Energy (GWh)"}
-    ]
-  }
+      "width": 600,
+      "height": 150,
+      "mark": {
+        "type": "area", "line": {"color": "darkgray"},
+      "point": {"filled": false, "fill": "white"}
 
+      }, 
+      "selection": {
+        "brush": {"type": "interval", "encodings": ["x"]}
+      },
+      "transform": [
+        {
+          "calculate": "datum['Fuel Type'] == 'Biogas' ? 'Biogas Energy' : datum['Fuel Type'] == 'Wind' ? 'Wind Power' : datum['Fuel Type'] == 'Hydro' ? 'Hydroelectric Power' : datum['Fuel Type'] == 'Large-scale solar PV' ? 'Large-scale Solar' : datum['Fuel Type'] == 'Small-scale solar PV' ? 'Small-scale Solar' : datum['Fuel Type'] == 'Bagasse, wood' ? 'Bioenergy (Bagasse & Wood)' : datum['Fuel Type']",
+          "as": "Fuel Type Renamed"
+        }
+      ],
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "temporal",
+          "axis": {"title": "Year"}
+        },
+        "y": {
+          "field": "Value",
+          "type": "quantitative",
+          "axis": {"title": "Energy Production (Gigawatt Hours)"}
+        },
+        "color": {
+          "field": "Fuel Type Renamed",
+          "type": "nominal",
+          "legend": {"title": "Renewable Source"}
+        }
+      }
+    },
+    {
+      "width": 600,
+      "height": 350,
+         "mark": {
+        "type": "area", "line": {"color": "darkgray"},
+      "point": {"filled": false, "fill": "white"}
+
+      }, 
+      "transform": [
+        {
+          "calculate": "datum['Fuel Type'] == 'Biogas' ? 'Biogas Energy' : datum['Fuel Type'] == 'Wind' ? 'Wind Power' : datum['Fuel Type'] == 'Hydro' ? 'Hydroelectric Power' : datum['Fuel Type'] == 'Large-scale solar PV' ? 'Large-scale Solar' : datum['Fuel Type'] == 'Small-scale solar PV' ? 'Small-scale Solar' : datum['Fuel Type'] == 'Bagasse, wood' ? 'Bioenergy (Bagasse & Wood)' : datum['Fuel Type']",
+          "as": "Fuel Type Renamed"
+        }
+      ],
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "temporal",
+          "title": "Year",
+          "scale": {"domain": {"selection": "brush"}}
+        },
+        "y": {
+          "field": "Value",
+          "type": "quantitative",
+          "axis": {"title": "Energy Production (Gigawatt Hours)"}
+        },
+        "color": {
+          "field": "Fuel Type Renamed",
+          "type": "nominal",
+          "legend": {"title": "Renewable Source"}
+        },
+        "tooltip": [
+          {"field": "Year", "type": "temporal"},
+          {"field": "Fuel Type Renamed", "type": "nominal", "title": "Source"},
+          {"field": "Value", "type": "quantitative", "title": "Energy (GWh)"}
+        ]
+      }
+    }
+  ]
 }
