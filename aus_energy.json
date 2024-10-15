@@ -1,11 +1,11 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 600,
-    "height": 450,
+    "height": 400,
     "title":
     {
         "text": "Energy Usage by Fuel Type Across Australia (2023)",
-        "fontSize": 18
+        "fontSize": 15 },
     "data": {
       "url": "https://raw.githubusercontent.com/jascikasabesh/datavis2/main/ne_10m_admin_1_states_provinces.json",
       "format": {
@@ -36,11 +36,11 @@
     "params": [
       {
         "name": "energy_type",
-        "value": "Coal",  
+        "value": "Renewables",  
         "bind": {
           "input": "select",
           "options": ["Coal", "Oil", "Gas", "Renewables"],
-          "name": "Select Energy: "
+          "name": "Select Fuel Type: "
         }
       }
     ],
